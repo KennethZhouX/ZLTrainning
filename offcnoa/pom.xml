@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.offcn</groupId>
+    <artifactId>offcnoa</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <springwebmvc>4.3.6.RELEASE</springwebmvc>
+        <mybatis>3.4.2</mybatis>
+        <spri-myb>1.3.1</spri-myb>
+        <jdbc>5.1.41</jdbc>
+        <c3p0>0.9.1</c3p0>
+        <!-- spring-jdbc以及Spring-aspect spring完成事务管理 -->
+        <sp-jdb>4.3.6.RELEASE</sp-jdb>
+        <sp-aop>4.3.6.RELEASE</sp-aop>
+        <page>5.0.0</page>
+        <jsr303>5.4.1.Final</jsr303>
+        <jstl>1.2</jstl>
+        <tag>1.1.2</tag>
+        <fil-load>1.3.1</fil-load>
+        <log>1.2.16</log>
+        <jun>4.12</jun>
+        <jedis>2.9.0</jedis>
+        <spring-redis>1.8.6.RELEASE</spring-redis>
+        <mybatis-generator>1.3.5</mybatis-generator>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.3.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis}</version>
+        </dependency>
+        <!-- spring和mybatis集成包 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${spri-myb}</version>
+        </dependency>
+        <!-- jdbc驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${jdbc}</version>
+        </dependency>
+
+        <!-- c3p0包 -->
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0}</version>
+        </dependency>
+
+        <!-- spring-jdbc以及Spring-aspect spring完成事务管理 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${sp-jdb}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${sp-aop}</version>
+        </dependency>
+
+        <!-- 分页插件包 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${page}</version>
+        </dependency>
+
+        <!-- jsr303验证 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${jsr303}</version>
+        </dependency>
+
+        <!-- jstl依赖 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/taglibs/standard -->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>${tag}</version>
+        </dependency>
+        <!-- 文件下载 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${fil-load}</version>
+        </dependency>
+        <!-- log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log}</version>
+        </dependency>
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${jun}</version>
+        </dependency>
+
+        <!-- redis缓存 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring-redis}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>${mybatis-generator}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

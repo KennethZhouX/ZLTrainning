@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<context:component-scan
+		base-package="com.offcn.*.cotrlloer"></context:component-scan>
+
+
+	<mvc:default-servlet-handler />
+
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		设置文件上传的最大大小
+		<property name="maxUploadSize" value="60000000"></property>
+	</bean> -->
+
+	<!-- <bean id="/login" class="com.offcn.service.Demo"></bean> -->
+
+	<!-- <bean id="Service" class="org.springframework.context.support.ConversionServiceFactoryBean"> 
+		<property name="converters" > <set> <bean class="com.offcn.utils.DateConVertor"></bean> 
+		</set> </property> </bean> -->
+
+	<!-- <mvc:resources location="/js" mapping=""></mvc:resources> -->
+
+	<!-- <mvc:interceptors> <mvc:interceptor> 拦截路径 <mvc:mapping path="/**"/> 
+		非拦截路径 <mvc:exclude-mapping path="/login"/> <bean class="com.offcn.utils.TestInterceptors"></bean> 
+		</mvc:interceptor> </mvc:interceptors> -->
+
+
+</beans>
+
+
+
+
+
+
+
+
+    
